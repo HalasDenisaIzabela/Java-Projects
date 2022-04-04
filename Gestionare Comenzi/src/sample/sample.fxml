@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="519.0" prefWidth="829.0">
+         <children>
+            <TabPane prefHeight="518.0" prefWidth="825.0" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab text="Client">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="472.0" prefWidth="834.0">
+                           <children>
+                              <Button layoutX="116.0" layoutY="21.0" mnemonicParsing="false" onAction="#addClient" prefHeight="24.0" prefWidth="35.0" text="+">
+                                 <font>
+                                    <Font name="System Bold Italic" size="14.0" />
+                                 </font></Button>
+
+                              <Label layoutX="14.0" layoutY="13.0" prefHeight="43.0" prefWidth="119.0" text="Client nou">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="30.0" layoutY="126.0" text="Nume">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="521.0" layoutY="73.0" prefHeight="21.0" prefWidth="55.0" text="Adresa">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="289.0" layoutY="73.0" prefHeight="17.0" prefWidth="42.0" text="Varsta">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="24.0" layoutY="73.0" text="ID">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="286.0" layoutY="126.0" prefHeight="18.0" prefWidth="36.0" text="Email">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="399.0" layoutY="22.0" text="Modificare client">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="559.0" layoutY="25.0" mnemonicParsing="false" onAction="#modificareClient" prefHeight="28.0" prefWidth="34.0" text="~&gt;" />
+
+                              <Label layoutX="189.0" layoutY="22.0" text="Cauta client">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="304.0" layoutY="22.0" mnemonicParsing="false" onAction="#findClient" text="🔎">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="632.0" layoutY="23.0" text="Stergere client">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="769.0" layoutY="23.0" mnemonicParsing="false" onAction="#deleteClient" prefHeight="31.0" prefWidth="36.0" text="del" />
+
+                              <TextField fx:id="id" layoutX="80.0" layoutY="69.0" prefHeight="27.0" prefWidth="137.0" />
+                              <TextField fx:id="nume" layoutX="81.0" layoutY="121.0" prefHeight="27.0" prefWidth="136.0" />
+                              <TextField fx:id="email" layoutX="348.0" layoutY="121.0" prefHeight="27.0" prefWidth="129.0" />
+                              <TextField fx:id="adresa" layoutX="593.0" layoutY="70.0" prefHeight="27.0" prefWidth="128.0" />
+                              <TextField fx:id="varsta" layoutX="347.0" layoutY="70.0" prefHeight="27.0" prefWidth="131.0" />
+                              <ListView fx:id="clienti" layoutX="24.0" layoutY="202.0" onMouseClicked="#selectClient" prefHeight="262.0" prefWidth="781.0">
+
+                              </ListView>
+                              <Button layoutX="27.0" layoutY="160.0" mnemonicParsing="false" onAction="#actualizareClienti" text="Afisare Clienti" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Produs">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="472.0" prefWidth="834.0">
+                           <children>
+                              <Button layoutX="116.0" layoutY="21.0" mnemonicParsing="false" onAction="#addProdus" prefHeight="24.0" prefWidth="35.0" text="+">
+                                 <font>
+                                    <Font name="System Bold Italic" size="14.0" />
+                                 </font></Button>
+
+                              <Label layoutX="14.0" layoutY="13.0" prefHeight="43.0" prefWidth="119.0" text="Produs nou">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="18.0" layoutY="125.0" text="Nume">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="218.0" layoutY="75.0" prefHeight="12.0" prefWidth="55.0" text="Categorie" />
+                              <Label layoutX="447.0" layoutY="74.0" prefHeight="17.0" prefWidth="42.0" text="Pret">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="218.0" layoutY="125.0" prefHeight="18.0" prefWidth="51.0" text="Cantitate" />
+                              <Label layoutX="399.0" layoutY="22.0" text="Modificare produs">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="559.0" layoutY="21.0" mnemonicParsing="false" onAction="#modificareProdus" prefHeight="28.0" prefWidth="34.0" text="~&gt;" />
+                             
+                              <Label layoutX="189.0" layoutY="22.0" text="Cauta produs">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="305.0" layoutY="21.0" mnemonicParsing="false" onAction="#findProdus" text="🔎">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+
+                              <Label layoutX="632.0" layoutY="23.0" text="Stergere produs">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="775.0" layoutY="19.0" mnemonicParsing="false" onAction="#deleteProdus" prefHeight="31.0" prefWidth="36.0" text="del" />
+                              <Label layoutX="17.0" layoutY="74.0" text="ID">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="idp" layoutX="69.0" layoutY="70.0" prefHeight="27.0" prefWidth="82.0" />
+                              <TextField fx:id="numep" layoutX="70.0" layoutY="121.0" prefHeight="27.0" prefWidth="81.0" />
+                              <TextField fx:id="categoriep" layoutX="282.0" layoutY="70.0" prefHeight="27.0" prefWidth="80.0" />
+                              <TextField fx:id="pretp" layoutX="489.0" layoutY="70.0" prefHeight="27.0" prefWidth="80.0" />
+                              <TextField fx:id="cantitatep" layoutX="282.0" layoutY="121.0" prefHeight="27.0" prefWidth="131.0" />
+
+                              <ListView fx:id="produse" layoutX="16.0" layoutY="220.0" onMouseClicked="#selectProdus" prefHeight="254.0" prefWidth="803.0" />
+                              <Button layoutX="18.0" layoutY="179.0" mnemonicParsing="false" onAction="#actualizareProduse" text="Afisare lista produse" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+
+                  <Tab text="Creare comanda">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ListView fx:id="clComenzi" layoutX="14.0" layoutY="32.0" onMouseClicked="#selectClientC" prefHeight="176.0" prefWidth="768.0" />
+                              <ListView fx:id="prodComenzi" layoutX="16.0" layoutY="237.0" onMouseClicked="#selectProdusC" prefHeight="138.0" prefWidth="766.0" />
+                              <Button layoutX="205.0" layoutY="410.0" mnemonicParsing="false" onAction="#creareComanda" text="Create Comanda" />
+                              <TextField fx:id="cantitateC" layoutX="382.0" layoutY="423.0" prefHeight="25.0" prefWidth="84.0" />
+                              <Label layoutX="399.0" layoutY="393.0" prefHeight="17.0" prefWidth="67.0" text="Cantitate" />
+                              <Label layoutX="30.0" layoutY="14.0" prefHeight="17.0" prefWidth="46.0" text="Clienti" />
+                              <Label layoutX="23.0" layoutY="220.0" text="Produse" />
+                              <Label layoutX="541.0" layoutY="393.0" text="idClient" />
+                              <Label layoutX="687.0" layoutY="393.0" text="idProdus" />
+                              <TextField fx:id="idC" layoutX="528.0" layoutY="423.0" prefHeight="25.0" prefWidth="85.0" />
+                              <TextField fx:id="idP" layoutX="659.0" layoutY="423.0" prefHeight="25.0" prefWidth="103.0" />
+                              <Label fx:id="cantitatePreaMare" layoutX="15.0" layoutY="393.0" text="Cantitate prea mare" textFill="#e11212" />
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Comenzi">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ListView fx:id="comenzi" layoutX="14.0" layoutY="32.0" prefHeight="431.0" prefWidth="796.0" />
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </Pane>
+   </children>
+</GridPane>

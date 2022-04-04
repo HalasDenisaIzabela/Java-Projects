@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="300.0" prefWidth="730.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="-Infinity" />
+   </rowConstraints>
+   <children>
+      <Pane fx:id="img" prefHeight="331.0" prefWidth="730.0" stylesheets="@Style.css">
+         <children>
+            <Button fx:id="adunare" contentDisplay="CENTER" layoutX="647.0" layoutY="23.0" mnemonicParsing="false" onAction="#apasButonAdunare" prefHeight="38.0" prefWidth="35.0" text="+" textFill="#56724e">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="scadere" layoutX="648.0" layoutY="68.0" mnemonicParsing="false" onAction="#apasButonScadere" prefHeight="38.0" prefWidth="34.0" text="-" textFill="#4c724c">
+               <font>
+                  <Font size="19.0" />
+               </font></Button>
+            <Button fx:id="inmultire" contentDisplay="BOTTOM" layoutX="648.0" layoutY="113.0" mnemonicParsing="false" onAction="#apasButonInmultire" prefHeight="38.0" prefWidth="34.0" text="*" textAlignment="CENTER" textFill="#387937">
+               <font>
+                  <Font size="19.0" />
+               </font></Button>
+            <Button fx:id="impartire" contentDisplay="CENTER" layoutX="647.0" layoutY="156.0" mnemonicParsing="false" onAction="#apasButonImpartire" prefHeight="38.0" prefWidth="35.0" text="/" textFill="#688a60">
+               <font>
+                  <Font size="19.0" />
+               </font></Button>
+            <Button fx:id="derivare" contentDisplay="CENTER" layoutX="632.0" layoutY="200.0" mnemonicParsing="false" onAction="#apasButonDerivare" prefHeight="29.0" prefWidth="65.0" text="P1'" textFill="#526f3f">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <Button fx:id="integrare" contentDisplay="CENTER" layoutX="632.0" layoutY="235.0" mnemonicParsing="false" onAction="#apasButonIntegrare" prefHeight="32.0" prefWidth="65.0" text="∫P1dx" textFill="#5d8054">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <TextField fx:id="t1" layoutX="55.0" layoutY="45.0" prefHeight="27.0" prefWidth="531.0">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <TextField fx:id="t2" layoutX="55.0" layoutY="97.0" prefHeight="10.0" prefWidth="531.0">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <TextField fx:id="tRez" editable="false" layoutX="16.0" layoutY="216.0" prefHeight="51.0" prefWidth="570.0">
+               <font>
+                  <Font size="16.0" />
+               </font></TextField>
+            <Label layoutX="55.0" layoutY="25.0" text="Polinom 1">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5448179271708683" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.26435592770576477" green="0.6184210777282715" blue="0.21759259700775146" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.30120614171028137" green="0.5394737124443054" blue="0.27473196387290955" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill></Label>
+            <Label layoutX="14.0" layoutY="188.0" text="Rezultat:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="0.5971223021582734" startY="0.7577937649880095">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.22787143290042877" green="0.5199999809265137" blue="0.18199999630451202" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.34375" green="0.43421053886413574" blue="0.3256579041481018" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill></Label>
+            <Label layoutX="55.0" layoutY="77.0" text="Polinom 2">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5448179271708683" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.2670159339904785" green="0.6578947305679321" blue="0.18884015083312988" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.31341373920440674" green="0.5526315569877625" blue="0.2916666567325592" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill></Label>
+            <Label contentDisplay="TEXT_ONLY" graphicTextGap="10.0" layoutX="243.0" layoutY="144.0" prefHeight="44.0" prefWidth="203.0" text="Calculator de polinoame" textAlignment="JUSTIFY">
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.09229999780654907" green="0.7099999785423279" blue="0.3923257291316986" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.32894736528396606" green="0.3947368562221527" blue="0.2850877046585083" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+               <cursor>
+                  <Cursor fx:constant="W_RESIZE" />
+               </cursor>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="291.0" prefHeight="2.0" prefWidth="693.0" text="Important:  Polinoamele de intrare trebuie sa fie de forma ax^b, chiar daca b este 1 sau 0">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5056022408963585" centerY="0.5959232613908872" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.3101648688316345" green="0.6578947305679321" blue="0.24061891436576843" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.21540367603302002" green="0.40789473056793213" blue="0.14540691673755646" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill></Label>
+         </children>
+      </Pane>
+   </children>
+</GridPane>

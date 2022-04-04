@@ -1,0 +1,1 @@
+Comanda{id=1, idClient=2, idProdus=4, cantitate=4}
